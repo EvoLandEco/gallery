@@ -1,0 +1,144 @@
+<!DOCTYPE html><html data-bs-theme="light" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>Home - WebToolBox</title><meta name="description" content="A collection of simple, handy and reusable Node.js and vanilla scripts"><link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap"><link rel="stylesheet" href="assets/fonts/font-awesome.min.css"><link rel="stylesheet" href="assets/css/styles.min.css"><link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<link rel="stylesheet" href="/Styles/heatwave.css">
+<script src="/JavaScript/heatwave.js"></script>
+
+
+<script src="/JavaScript/treeview.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/Styles/treeview.css">
+
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<link rel="stylesheet" href="/Styles/phylovis.css">
+<script src="/JavaScript/phylovis.js"> </script>
+
+<script src=""/JavaScript/newickvis.js" defer></script> <!-- Link to the external JavaScript file -->
+<link rel="stylesheet" href="/Styles/newickvis.css">
+</head><body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77"><nav class="navbar navbar-expand-md fixed-top" id="mainNav" style="background: transparent;border-color: transparent;"><div class="container"><a class="navbar-brand" href="#" style="color: rgb(121,117,147);font-weight: bold;">WebToolBox</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button><div class="collapse navbar-collapse" id="navbarResponsive" style="background: rgb(121,117,147);border-radius: 7px;box-shadow: 3px 3px 7px var(--bs-navbar-disabled-color);"><ul class="navbar-nav ms-auto"><li class="nav-item nav-link"><a class="nav-link" href="https://github.com/EvoLandEco/webtoolbox" style="border-radius: 6px;">DOCUMENTATION</a></li><li class="nav-item nav-link"><a class="nav-link" href="https://qtj.me" style="border-radius: 6px;background-color: #a19fb4;">About me</a></li></ul></div></div></nav><header class="masthead" style="background: rgb(255,250,243);"><div class="align-content-start intro-body" style="overflow-y: auto;"><div class="container float-none" style="margin-top: 120px;"><div class="row" style="text-align: center;vertical-align: middle;border-color: transparent;"><div class="col-lg-8 col-xxl-10 mx-auto" style="border-color: transparent;"><div class="row" style="border-color: transparent;"><div class="col-md-6 align-self-center"><h1 data-aos="fade" class="brand-heading" style="color: rgb(181,165,184);">Gallery</h1></div><div class="col-md-6 align-self-center" style="text-align: left;"><p data-aos="fade" class="intro-text" style="color: rgb(181,165,184);text-align: left;font-size: 30px;font-family: sans-serif;">Interactive Data Visualization Examples</p></div></div></div></div></div><div class="container d-flex d-xxl-flex justify-content-xxl-center align-items-xxl-start" style="margin-top: 0px;"><div class="col-md-6 d-xxl-flex flex-grow-1 flex-shrink-0 align-items-xxl-start" data-aos="fade" style="height: auto;width: 1320px;"><div class="vstack flex-grow-1 flex-shrink-1 bounce animated" style="background: rgb(121,117,147);margin-bottom: 20px;margin-top: 10px;border-radius: 22px;box-shadow: 3px 3px 7px var(--bs-secondary-color);"><div class="d-xxl-flex flex-grow-1 flex-shrink-1 align-items-xxl-start" style="margin-top: 17px;margin-left: 17px;margin-right: 17px;/*height: auto;*/background: rgb(255,250,243);border-radius: 24px;border-color: var(--bs-secondary-color);"><div class="main-container">
+    <!-- Left Column: Figure -->
+    <div class="figure" id="figure">
+        <!-- Chart will be rendered here -->
+            <div class="circle">
+              <div class="dot"></div>
+              <div class="dot-outer"></div>
+            </div>
+    </div>
+    <div class="controls-container">
+        <div id="slider-container" class="slider-wrapper">
+            <label for="year-slider" class="slider-label">Year:</label>
+            <input type="range" id="year-slider" min="1999" max="2018" value="2000" step="1">
+            <span id="year-value">2000</span>
+        </div>
+
+        <div id="metric-container" class="slider-wrapper">
+            <label for="metric-slider" class="slider-label">Metric:</label>
+            <input type="range" id="metric-slider" min="0" max="2" value="1" step="1">
+            <span id="metric-value">Average</span>
+        </div>
+    </div>
+</div></div><div style="height: 100px;/*margin-bottom: 100px;*/"><div class="row" style="border-color: transparent;"><div class="col" style="width: 30%;"><h1 style="width: auto;color: var(--bs-body-bg);padding-top: 15px;padding-left: 8px;">Heatwave</h1></div><div class="col" style="width: 70%;text-align: right;"><div class="description-link">
+<a href="https://github.com/EvoLandEco/webtoolbox" target="_blank" class="description-icon">
+  <i class="fa-brands fa-github-alt"></i>
+</a>
+</div></div></div></div></div></div></div><div class="container d-xxl-flex justify-content-xxl-center align-items-xxl-start" data-aos="fade" data-aos-delay="100" style="margin-top: 0px;"><div class="col-md-6" style="margin-right: 15px;height: auto;width: 343px;"><div class="vstack bounce animated" style="background: rgb(121,117,147);margin-bottom: 20px;margin-top: 10px;border-radius: 22px;box-shadow: 3px 3px 7px var(--bs-secondary-color);"><div class="d-xxl-flex flex-grow-1 flex-shrink-1" style="margin-top: 17px;margin-left: 17px;margin-right: 17px;height: 810px;background: rgb(255,250,243);border-radius: 24px;color: rgb(87,118,181);"><div class="treeview-container">
+        <button id="toggleAll" class="btn treeview-button">Expand All</button>
+        <section id="treeView"></section>
+</div></div><div style="height: 100px;/*margin-bottom: 100px;*/"><div class="row" style="border-color: transparent;"><div class="col"><h1 style="color: var(--bs-body-bg);padding-top: 15px;padding-left: 8px;">TreeView</h1></div><div class="col" style="text-align: right;"><div class="description-link">
+<a href="https://github.com/EvoLandEco/webtoolbox" target="_blank" class="description-icon">
+  <i class="fa-brands fa-github-alt"></i>
+</a>
+</div></div></div></div></div></div><div class="col-md-6" style="margin-left: 15px;height: auto;border-color: rgb(121,117,147);width: 947px;"><div class="vstack bounce animated" style="background: rgb(121,117,147);margin-bottom: 20px;margin-top: 10px;border-radius: 22px;box-shadow: 3px 3px 7px var(--bs-secondary-color);"><div class="d-xxl-flex flex-grow-1 flex-shrink-1" style="margin-top: 17px;margin-left: 17px;margin-right: 17px;height: 810px;background: rgb(255,250,243);border-radius: 24px;color: rgb(87,118,181);"><div id="phylovis-container">
+<div class="row-button">
+    <form id="treeForm">
+    <label class="phylovis-ntips" for="tipCount">Number of Tips:</label>
+    <input class="phylovis-ntips-input" type="number" id="tipCount" name="tipCount" min="2" max="10" value="5" required>
+    <button class="btn phylovis-button" type="submit">Generate Tree</button>
+</form><br>
+    <!--add button to change layout to phylogenetic tree style-->
+    <button class="btn phylovis-button" onclick="network.setOptions({layout: {hierarchical: {sortMethod: 'directed'}}})">Phylogeny Form</button>
+    <!--add button to change layout to phylogenetic tree style and disable physics-->
+    <button  class="btn phylovis-button" onclick="network.setOptions({layout: {hierarchical: false}, physics: true})">Graph Form</button>
+
+</div>
+    <!-- First row: legend and network -->
+    <div class="row">
+        <div id="mynetwork-legend">
+            <div id="legend-content">
+                <div class="legend-item">
+                    <div class="legend-circle root-circle"></div>
+                    <span>Root</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-circle internal-circle"></div>
+                    <span>Internal</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-circle tip-circle"></div>
+                    <span>Tip</span>
+                </div>
+            </div>
+        </div>
+        <div id="mynetwork"></div>
+    </div>
+    <!-- Column titles for the second row -->
+    <div class="row-title">
+        <div id="adjacency-list-title">Adjacency List</div>
+        <div id="node-features-title">Node Features</div>
+    </div>
+    <!-- Second row: adjacency list and node features -->
+    <div class="row">
+        <div id="adjacency-list">
+            <div class="content">
+                <!-- Adjacency list content goes here -->
+            </div>
+        </div>
+        <div id="node-features">
+            <div class="content">
+                <!-- Node features content goes here -->
+            </div>
+        </div>
+    </div>
+</div></div><div style="height: 100px;/*margin-bottom: 100px;*/"><div class="row" style="border-color: transparent;"><div class="col"><h1 style="color: var(--bs-body-bg);padding-top: 15px;padding-left: 8px;">PHYLOVIS</h1></div><div class="col" style="text-align: right;"><div class="description-link">
+<a href="https://github.com/EvoLandEco/webtoolbox" target="_blank" class="description-icon">
+  <i class="fa-brands fa-github-alt"></i>
+</a>
+</div></div></div></div></div></div></div><div class="container d-flex d-xxl-flex justify-content-xxl-center align-items-xxl-start" style="margin-top: 0px;"><div class="col-md-6 d-xxl-flex flex-grow-1 flex-shrink-0 align-items-xxl-start" data-aos="fade" style="height: auto;width: 1320px;"><div class="vstack flex-grow-1 flex-shrink-1 bounce animated" style="background: rgb(121,117,147);margin-bottom: 20px;margin-top: 10px;border-radius: 22px;box-shadow: 3px 3px 7px var(--bs-secondary-color);"><div class="d-xxl-flex flex-grow-1 flex-shrink-1 align-items-xxl-start" style="margin-top: 17px;margin-left: 17px;margin-right: 17px;/*height: auto;*/background: rgb(255,250,243);border-radius: 24px;border-color: var(--bs-secondary-color);">    <!-- Main Container with Legend, Chart, and Controls -->
+    <div id="newickvis-container">
+        <div id="newickvis-legend">
+            <!-- Legend will be dynamically populated here -->
+        </div>
+        <div id="newickvis-chart">
+            <!-- Chart will be rendered here -->
+        </div>
+        <div id="newickvis-controls">
+            <!-- Toggle switch for branch length -->
+            <div class="newickvis-toggle-container">
+                <label class="newickvis-switch">
+                    <input type="checkbox" id="newickvis-showLengthCheckbox">
+                    <span class="newickvis-slider"></span>
+                </label>
+                <label class="newickvis-toggle-label">Branch length</label>
+            </div>
+
+            <!-- Second toggle switch for legend visibility -->
+            <div class="newickvis-toggle-container">
+                <label class="newickvis-switch">
+                    <input type="checkbox" id="newickvis-toggleLegendCheckbox" checked>
+                    <span class="newickvis-slider"></span>
+                </label>
+                <label class="newickvis-toggle-label">Show Legend</label>
+            </div>
+
+            <!-- Custom styled file input -->
+            <div class="newickvis-file-input-wrapper">
+                <button id="newickvis-fileInputButton" class="btn">Select File</button>
+                <input type="file" id="newickvis-fileInput" style="display: none;">
+            </div>
+
+            <div id="newickvis-subclade-controls"></div> <!-- Div to hold subclade checkboxes -->
+        </div>
+    </div></div><div style="height: 100px;/*margin-bottom: 100px;*/"><div class="row" style="border-color: transparent;"><div class="col" style="width: 30%;"><h1 style="width: auto;color: var(--bs-body-bg);padding-top: 15px;padding-left: 8px;">NEwickVIS</h1></div><div class="col" style="width: 70%;text-align: right;"><div class="description-link">
+<a href="https://github.com/EvoLandEco/webtoolbox" target="_blank" class="description-icon">
+  <i class="fa-brands fa-github-alt"></i>
+</a>
+</div></div></div></div></div></div></div><footer class="text-center"><div class="container text-muted py-4 py-lg-5" style="font-family: 'Helvetica', 'Arial', sans-serif;"><ul class="list-inline"></ul><ul class="list-inline"><li class="list-inline-item me-4"><a href="https://github.com/EvoLandEco"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" style="font-size: 36px;color: rgb(121,117,147);"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"></path></svg></a></li><li class="list-inline-item me-4"><a href="https://www.linkedin.com/in/tjqin/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" style="font-size: 36px;color: rgb(121,117,147);"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li><li class="list-inline-item"><a href="https://www.researchgate.net/profile/Tianjian-Qin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" style="font-size: 36px;border-radius: 2px;color: rgb(121,117,147);"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"></path></svg></a></li></ul><p class="mb-0">Copyright © 2024 Tianjian Qin</p></div></footer></div></header><script src="assets/bootstrap/js/bootstrap.min.js"></script><script src="assets/js/script.min.js"></script></body></html>
